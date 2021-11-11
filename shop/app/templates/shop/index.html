@@ -1,0 +1,294 @@
+{% extends 'shop/main.html' %}
+{% load static %}
+{% block title_page %}
+<title>Fishing-Shop</title>
+{% endblock title_page %}
+{% block content %}
+<header class="header" id="header">
+    <!--header-start-->
+    <div class="container">
+        <a class="res-nav_click" href="#"><i class="fa fa-bars"></i></a>
+        <figure class="logo animated fadeInDown delay-07s">
+            <a href="#"><img src="{% static 'img/logo.svg' %}" alt=""></a>
+        </figure>
+<!--        <h1 class="animated fadeInDown delay-07s">Наши снасти ловят даже удачу!</h1>-->
+        <ul class="we-create animated fadeInUp delay-1s">
+            <li><font size="2" color="#5D6D7E" face="Arial">
+                <h1 class="animated fadeInDown delay-07s">Наши снасти ловят даже удачу!</h1>
+                Для тех кто со спиннингом по жизни.</font></li>
+        </ul>
+        <a class="link animated fadeInUp delay-1s servicelink" href="{% url 'shop' %}">Добро пожаловать</a>
+    </div>
+</header>
+<!--header-end-->
+
+<!--main-nav-end-->
+<section class="main-section" id="service">
+    <!--main-section-start-->
+    <div class="container">
+        <h2>Блог</h2>
+        <h6>Мы предлагаем исключительный сервис с бесплатными объятиями!</h6>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 wow fadeInLeft delay-05s">
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <!--                        <i class="fa fa-paw"></i>-->
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>Марлин</h3>
+                        <p>Все помнят знаменитый рассказ Хемингуэя «Старик и море»,
+                            где большая рыба несколько дней боролась с человеком в открытом море.
+                            Это был голубой марлин — одна из крупнейших в мире рыб.
+                            Между рыбаками считается престижным поймать его.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <!--                        <i class="fa fa-gear"></i>-->
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>Рыбалка</h3>
+                        <p>Охота на марлина — очень азартное занятие,
+                            ведь такая рыба развивает скорость до 100 км/ч!
+                            Попавшись на крючок, она жестко сопротивляется,
+                            выпрыгивает из воды, может сражаться часами.</p>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1">
+                        <!--                        <i class="fa fa-apple"></i>-->
+                    </div>
+                    <div class="service-list-col2">
+                        <h3>Досуг</h3>
+                        <p>Сезон марлинов совпадает с туристическим, с мая по сентябрь включительно.</p>
+                    </div>
+                </div>
+                <div class="service-list-col2">
+                    <h3>Океан</h3>
+                    <p>Океанская рыбалка — довольно популярное развлечение.
+                        Именно здесь это настоящее приключение,
+                        встреча лицом к лицу с неугомонным океаном,
+                        возможность помериться силой с большой рыбой,
+                        словом, то, к чему стремится большинство настоящих рыбаков.</p>
+
+                </div>
+            </div>
+            <figure class="col-lg-8 col-sm-6  text-right wow fadeInUp delay-02s">
+                <img src="{% static 'img/80266c295f66d0f16a4a632d25774529-scaled-900x500.jpg' %}" alt="">
+            </figure>
+
+        </div>
+    </div>
+</section>
+<!--main-section-end-->
+
+<section class="main-section alabaster">
+    <!--main-section alabaster-start-->
+    <div class="container">
+        <div class="row">
+            <figure class="col-lg-5 col-sm-4 wow fadeInLeft">
+                <img src="{% static 'img/copy_katushka-shimano-slx-151hg-36678-38080758791019.webp' %}"
+                     alt="">
+            </figure>
+            <div class="col-lg-7 col-sm-8 featured-work">
+                <h2>Морские катушки</h2>
+                <P class="padding-b">Главное отличие катушки для ловли на море от
+                    обычной
+                    устойчивость к агрессивной соленой среде.
+                    Все механизмы изделия должны быть надежно защищены,
+                    а металлические составляющие конструкции не подвержены коррозии.
+                    Безусловным лидером в производстве рыболовных снастей и, в том
+                    числе, морских катушек являются
+                    SHIMANO и DAIWA.
+                    Их продукция отвечает всем мировым стандартам и требованиям.
+                    Самые знаменитые спортсмены и чемпионы рыболовных турниров
+                    пользуются продукцией этих компаний.</P>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-02s">
+                        <!--                        <i class="fa fa-magic"></i>-->
+                    </div>
+                    <div class="featured-box-col2 wow fadeInRight delay-02s">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-04s">
+                        <!--                        <i class="fa fa-gift"></i>-->
+                    </div>
+                    <div class="featured-box-col2 wow fadeInRight delay-04s">
+                        <h3>SHIMANO</h3>
+                        <p>На сегодняшний день Shimano является мировым брендом
+                            рыболовных снастей и амуниции.
+                            Магазины данной компании можно обнаружить в более чем сорока
+                            странах мира.
+                            Компания Shimano смогла добиться невероятных успехов в
+                            производстве катушек.
+                            Сегодня они по праву считаются, чуть ли не самыми лучшими в
+                            мире.
+                            Плавность хода, качество намотки лески,
+                            технологические новшества - все эти показатели находятся на
+                            высоком уровне в катушках
+                            Shimano.
+                            Катушки данного производителя выделяются невысокой ценой и
+                            отличным качеством изготовления.
+                        </p>
+                    </div>
+                </div>
+                <div class="featured-box">
+                    <div class="featured-box-col1 wow fadeInRight delay-06s">
+                        <!--                        <i class="fa fa-dashboard"></i>-->
+                    </div>
+                    <div class="featured-box-col2 wow fadeInRight delay-06s">
+                        <h3>DAIWA</h3>
+                        <p>Под маркой Daiwa выпускаются спиннинговые катушки,
+                            которые идеально подходят для ловли и вываживания рыбы
+                            средних и крупных размеров.
+                            Такая мультипликаторная или безынерционная катушка Daiwa
+                            исключает спутывание лески,
+                            позволяют точно дозировать снасти при забросе и вываживании.
+                            Бренд предлагает модели с отличным сочетанием стоимости и
+                            точности сборки,
+                            надежности и технологичности механизма. </p>
+                    </div>
+                </div>
+                <a class="Learn-More" href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--main-section alabaster-end-->
+
+<section class="main-section client-part" id="client">
+    <!--main-section client-part-start-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="client-part-haead wow fadeInDown delay-05">– Не утомляет
+                    каждый день работать за компьютером?
+                    – Нет. Утомляет каждый день работать!
+                </p>
+            </div>
+        </div>
+        <ul class="client wow fadeIn delay-05s">
+            <li><a href="#">
+                <h3>Alexandr.B</h3>
+                <span>License Inc.</span>
+            </a></li>
+        </ul>
+    </div>
+</section>
+
+<section class="main-section team" id="team">
+    <!--main-section team-start-->
+    <div class="container">
+        <h2>Наша команда</h2>
+        <h6>Познакомьтесь с нашей замечательной командой. Мы не будем кусаться.</h6>
+        <div class="team-leader-block clearfix">
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-03s">
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="{% static 'img/team-leader-pic1.jpg' %}" alt="">
+                    <ul>
+                            <li><a href="#" class="fa fa-twitter"></a></li>
+                            <li><a href="#" class="fa fa-facebook"></a></li>
+                            <li><a href="#" class="fa fa-instagram"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-03s">Александр Невский</h3>
+                <span class="wow fadeInDown delay-03s">директор магазина</span>
+                <p class="wow fadeInDown delay-03s">Соберите все силы и улыбнитесь в
+                    самый трудный день,
+                    и тогда вы сможете улыбнуться в любой другой день.
+                </p>
+            </div>
+            <div class="team-leader-box">
+                <div class="team-leader  wow fadeInDown delay-06s">
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="{% static 'img/team-leader-pic2.jpg' %}" alt="">
+                    <ul>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-06s">Алексей Попов</h3>
+                <span class="wow fadeInDown delay-06s">менеджер продаж</span>
+                <p class="wow fadeInDown delay-06s">Если в качестве адреса доставки в
+                    интернет-магазинах
+                    указать рабочий,
+                    то ходить на работу будет в разы приятнее.
+                </p>
+            </div>
+            <div class="team-leader-box">
+                <div class="team-leader wow fadeInDown delay-09s">
+                    <div class="team-leader-shadow"><a href="#"></a></div>
+                    <img src="{% static 'img/team-leader-pic3.jpg' %}" alt="">
+                    <ul>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                    </ul>
+                </div>
+                <h3 class="wow fadeInDown delay-09s">Юлия Ветрова</h3>
+                <span class="wow fadeInDown delay-09s">бухгалтер</span>
+                <p class="wow fadeInDown delay-09s">Еще один день оказался напрасной
+                    тратой макияжа.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--main-section team-end-->
+<section class="business-talking">
+    <!--business-talking-start-->
+    <div class="container">
+        <h2>Поговорим о рыбалке ...</h2>
+    </div>
+</section>
+<!--business-talking-end-->
+<div class="container">
+    <section class="main-section contact" id="contact">
+
+        <div class="row">
+            <div class="col-lg-6 col-sm-7 wow fadeInLeft">
+                <div class="contact-info-box address clearfix">
+                    <h3><i class=" icon-map-marker"></i>Address:</h3>
+                    <span>ул.Суворова555<br>Украина, Херсон, 73000.</span>
+                </div>
+                <div class="contact-info-box phone clearfix">
+                    <h3><i class="fa fa-phone"></i>Phone:</h3>
+                    <span>+380995555555</span>
+                </div>
+                <div class="contact-info-box email clearfix">
+                    <h3><i class="fa fa-pencil"></i>email:</h3>
+                    <span>Fish_shop@gmail.com</span>
+                </div>
+                <div class="contact-info-box hours clearfix">
+                    <h3><i class="fa fa-clock-o"></i>Hours:</h3>
+                    <span><strong>Понедельник - Четверг:</strong> 10.00 - 18.00<br><strong>Пятница:</strong> Люди сейчас по пятницам работают?<br><strong>Суббота - Воскресенье:</strong> Лучше не спрашивать.</span>
+                </div>
+                <ul class="social-link">
+                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a>
+                    </li>
+                     <li class="instagram"><a href="#"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo"><a href="#"><img src="{% static 'img/logo.svg' %}"
+                                                  alt=""></a></div>
+        <span class="copyright">&copy; The theme is fishing. All rights reserved</span>
+        <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">Bukatin.A</a>
+        </div>
+    </div>
+</footer>
+{% endblock content %}
+

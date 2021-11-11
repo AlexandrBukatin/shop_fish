@@ -1,0 +1,82 @@
+{% extends 'shop/main.html' %}
+{% load static %}
+{% block title_page %}
+<title xmlns="http://www.w3.org/1999/html">Магазин</title>
+{% endblock title_page %}
+{% block content %}
+{% if request.user.is_authenticated %}
+<div style="position: absolute; right: 40%; transform: translateX(-50%); margin-top: 10px;">
+    <button onclick="window.location.href = {% url 'register' %}" type="submit" class="btn btn-outline-info">Профиль
+    </button>
+    <button onclick="window.location.href = {% url 'exit' %}" type="submit" class="btn btn-outline-info">Выход</button>
+</div>
+{% else %}
+<div style="position: absolute; right: 40%; transform: translateX(-50%); margin-top: 10px;">
+    <button onclick="window.location.href = {% url 'register' %}" type="submit" class="btn btn-outline-info">
+        Регистрация
+    </button>
+    <button onclick="window.location.href = {% url 'login' %}" type="submit" class="btn btn-outline-info">Вход</button>
+</div>
+{% endif %}
+<section class="main-section paddind" id="Portfolio">
+    <!--main-section-start-->
+    <div class="container">
+        <h2>Всё для рыбалки</h2>
+        <h6>Наши снасти одобрены лучшими рыболовами.</h6>
+        <div class="portfolioFilter">
+            <ul class="Portfolio-nav wow fadeIn delay-02s">
+                <li><a href="#" data-filter="*" class="current">Всё</a></li>
+                <li><a href="#" data-filter=".aaaa">Приманки</a></li>
+                <li><a href="#" data-filter=".dddd">Спиннинги</a></li>
+                <li><a href="#" data-filter=".ffff">Катушки</a></li>
+                <li><a href="#" data-filter=".gggg">Шнуры</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--            /катушки/-->
+    <div class="portfolioContainer wow fadeInUp delay-04s">
+        {% for post in prod %}
+        {% if post.remainder%}
+        {% if post.category == "fishing reel" %}
+        <div class=" Portfolio-box ffff">
+            <a href="{% url 'product' post.id %}">
+                <img src="{{ post.img.url}}" alt=""></a>
+            <h3><a href="{% url 'product' post.id %}">
+                {{ post.name }}</a></h3>
+            <p>Цена: {{ post.price}} грн.</p>
+        </div>
+        <!--       /спиннинги/-->
+        {% elif post.category == "spinning" %}
+        <div class="Portfolio-box dddd">
+            <a href="{% url 'product' post.id %}">
+                <img src="{{ post.img.url}}" alt=""></a>
+            <h3><a href="{% url 'product' post.id %}">
+                {{ post.name }}</a></h3>
+            <p>Цена: {{ post.price}} грн.</p>
+        </div>
+        <!--        /приманки/-->
+        {% elif post.category == "lures" %}
+        <div class=" Portfolio-box aaaa">
+            <a href="{% url 'product' post.id %}">
+                <img src="{{ post.img.url}}" alt=""></a>
+            <h3><a href="{% url 'product' post.id %}">
+                {{ post.name }}</a></h3>
+            <p>Цена: {{ post.price}} грн.</p>
+        </div>
+        {% else %}
+        <!--      /шнуры, леска/-->
+        <div class=" Portfolio-box gggg">
+            <a href="{% url 'product' post.id %}">
+                <img src="{{ post.img.url}}" alt=""></a>
+            <h3><a href="{% url 'product' post.id %}">
+                {{ post.name }}</a></h3>
+            <p>Цена: {{ post.price}} грн.</p>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock content %}

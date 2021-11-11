@@ -1,0 +1,21 @@
+{% extends 'shop/main.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        {% for post in prod %}
+        <div class="col-md-6">
+            <div class=" Portfolio-box aaaa">
+                <a href="{% url 'product' post.id %}">
+                    <img src="{{ post.img.url}}" alt=""></a>
+                <h3><a href="{% url 'product' post.id %}">
+                    {{ post.name }}</a></h3>
+                <p>Цена: {{ post.price}} грн.</p>
+            </div>
+        </div>
+        {% empty %}
+        <h4>По вашему запросу: {{search_query}} ничего не найдено.</h4>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+

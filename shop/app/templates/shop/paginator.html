@@ -1,0 +1,27 @@
+<div class="container">
+    {% if context.has_other_pages %}
+        <nav>
+            <ul class="pagination mt-4" style="padding-left: 466px">
+                {% if context.has_previous %}
+                    <li class="page-item" style="margin-right: 15px;"><a class="page-link" style="border-radius: 9px"
+                                             href="?page={{ context.previous_page_number }}">Предыдущая</a>
+                    </li>
+                {% endif %}
+                {% for num in context.paginator.page_range %}
+                    <li class="page-item {% if request.GET.page == num|stringformat:'i' %} active {% endif %}" style="margin-right: 15px;">
+                        {% if num >= context.number|add:-2 and num <= context.number|add:2 %}
+                            <a class="page-link" style="border-radius: 9px"
+                               href="?page={{ num }}">{{ num }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                {% if context.has_next %}
+                    <li class="page-item" style="margin-right: 15px;">
+                        <a class="page-link" style="border-radius: 9px"
+                           href="?page={{ context.next_page_number }}">Следующая</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+</div>
